@@ -1,0 +1,57 @@
+@import "mixins";
+@import "colors";
+
+.container{
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+
+    backdrop-filter: blur(10px);
+    background-color: rgba($babypow, 0.5);
+    
+    min-height: 100vh;
+}
+
+body{
+    background-image: url("../img/bodybg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+    align-content: center;
+
+    @media (max-width: 400px) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    border: 0.1rem solid $davsgrey;
+    
+    
+    background-color: white;
+    img{
+        display: block;
+        width: 100%;
+        height: auto;
+        @media (max-width: 400px) {
+            border-radius: 15rem;
+            max-width: 200px;
+        }
+    }
+    
+    h3{
+        margin: 0.5rem;
+    }
+}
+

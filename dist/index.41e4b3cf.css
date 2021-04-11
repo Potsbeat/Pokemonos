@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+header {
+  position: fixed;
+  top: 0;
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  width: 100vw;
+  height: 3.5rem;
+  min-height: fit-content;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #4d5057;
+  backdrop-filter: blur(4px);
+  z-index: 20;
+  box-shadow: 0px 4px 26px;
+}
+header input[type=text] {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 20px;
+  padding: 0 1rem;
+  font-size: large;
+  color: #eef0eb;
+  border: 2px solid #b4b8ab;
+}
+header input[type=text]::placeholder {
+  color: #b4b8ab;
+  font-size: medium;
+}
+header input[type=text]:focus {
+  outline: none !important;
+}
+header input[type=text]:focus::placeholder {
+  color: transparent;
+}
+header nav {
+  width: 70%;
+  height: 100%;
+}
+header h2 {
+  color: #f4f9e9;
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  backdrop-filter: blur(10px);
+  background-color: rgba(238, 240, 235, 0.5);
+  min-height: 100vh;
+}
+body {
+  background-image: url("bodybg.5e681ba4.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  border: 0.1rem solid #4d5057;
+  background-color: white;
+}
+@media (max-width: 400px) {
+  .card {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 400px) {
+  .card img {
+    border-radius: 15rem;
+    max-width: 200px;
+  }
+}
+.card h3 {
+  margin: 0.5rem;
+}
+/*# sourceMappingURL=index.41e4b3cf.css.map */
