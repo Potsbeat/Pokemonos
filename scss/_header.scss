@@ -18,14 +18,18 @@ header{
     z-index: 20;
     box-shadow: 0px 4px 26px;
     
+     @media (max-width: 400px) {
+         justify-content: space-between;
+     }
+
     input[type=text]{
         width: 100%;
-        max-width: 800px;
         height: 100%;
         background-color: rgba(0,0,0,0.0);
         border-radius: 20px;
         padding: 0 1rem;
 
+        text-align: center;
         font-size: large;
         color: $babypow;
 
@@ -41,15 +45,42 @@ header{
                 color: transparent;
             }
         }
+
+        
     }
 
-    nav{
+    .nav{
         width: 70%;
         height: 100%;    
-       
+        @media (max-width: 481px){
+            width: 100%;
+        
+        }
     }
 
     h2{
         color: $ivory;
     }
+
+    i{
+        
+        font-size: 1.4rem;
+        color: $babypow;
+        border: 2px solid $ivory;
+        border-radius: 0.2rem;
+        padding: 0.3rem;
+        margin-left: 0.5rem;
+
+        @media (max-width: 481px) {
+            visibility: hidden;
+            display: none;
+        }
+    }
+}
+
+.nav_container{
+    width: 70%;
+    
+    height: 100%;
+    
 }

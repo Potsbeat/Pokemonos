@@ -22,13 +22,18 @@ header {
   z-index: 20;
   box-shadow: 0px 4px 26px;
 }
+@media (max-width: 400px) {
+  header {
+    justify-content: space-between;
+  }
+}
 header input[type=text] {
   width: 100%;
-  max-width: 800px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 20px;
   padding: 0 1rem;
+  text-align: center;
   font-size: large;
   color: #eef0eb;
   border: 2px solid #b4b8ab;
@@ -43,12 +48,35 @@ header input[type=text]:focus {
 header input[type=text]:focus::placeholder {
   color: transparent;
 }
-header nav {
+header .nav {
   width: 70%;
   height: 100%;
 }
+@media (max-width: 481px) {
+  header .nav {
+    width: 100%;
+  }
+}
 header h2 {
   color: #f4f9e9;
+}
+header i {
+  font-size: 1.4rem;
+  color: #eef0eb;
+  border: 2px solid #f4f9e9;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+  margin-left: 0.5rem;
+}
+@media (max-width: 481px) {
+  header i {
+    visibility: hidden;
+    display: none;
+  }
+}
+.nav_container {
+  width: 70%;
+  height: 100%;
 }
 .container {
   width: 90%;
@@ -75,27 +103,69 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-content: center;
-  border: 0.1rem solid #4d5057;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 1px 15px rgba(77, 80, 87, 0.5);
   background-color: white;
 }
 @media (max-width: 400px) {
   .card {
+    width: 75%;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
 .card img {
   display: block;
   width: 100%;
+  max-width: 200px;
   height: auto;
 }
 @media (max-width: 400px) {
   .card img {
     border-radius: 15rem;
-    max-width: 200px;
+    border: 6px solid #4d5057;
+    max-width: 150px;
   }
 }
 .card h3 {
+  margin: 0.5rem;
+  font-weight: 400;
+  color: #4d5057;
+  align-self: center;
+}
+.card hr {
+  display: none;
+}
+@media (max-width: 400px) {
+  .card hr {
+    display: block;
+    width: 100%;
+    align-self: center;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+  }
+}
+p {
+  margin: 0.2rem;
+  background-color: aqua;
+}
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+}
+.horizontal-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  list-style-position: inside;
+  padding-left: 0.7rem;
+}
+.description-block {
   margin: 0.5rem;
 }
 /*# sourceMappingURL=index.41e4b3cf.css.map */
