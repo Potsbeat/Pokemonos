@@ -458,20 +458,27 @@ function showPokemon(nombre) {
   getPokemon(nombre.toLowerCase()).then(response => {
     return `
             <div class="card">
-                <section class="vertical-flex">
+                <section class="vertical-flex center-items">
                     <h3>${response.name.toUpperCase()}</h3>
                     <img src="${response.sprites.other["official-artwork"].front_default}">
                     <hr>
                 </section>
-                <div class="vertical-flex">
-                <section class="description-block">
-                    Abilities:
-                    <ul>${response.abilities.map(showAbilities).join('')}</ul>
-                </section>
-                <section class="description-block">
-                    Types:
-                    <ul>${response.types.map(showTypes).join('')}</ul>
-                </section>
+                <div class="vertical-flex space-evenly">
+                    <section class="description-block">
+                        Abilities:
+                        <ul>${response.abilities.map(showAbilities).join('')}</ul>
+                    </section>
+                    <section class="description-block">
+                        Types:
+                        <ul>${response.types.map(showTypes).join('')}</ul>
+                    </section>
+                    <section class="description-block hidden-large">
+                        <button>stats</button>
+                    </section>
+                </div>
+
+                <div class="vertical-flex hidden-small">
+                    Stats:
                 </div>
             </div>`;
   }).then(elemento => {

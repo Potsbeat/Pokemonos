@@ -54,7 +54,7 @@ header{
         height: 100%;    
         @media (max-width: 481px){
             width: 100%;
-        
+            
         }
     }
 
@@ -63,17 +63,17 @@ header{
     }
 
     i{
-        
-        font-size: 1.4rem;
-        color: $babypow;
-        border: 2px solid $ivory;
-        border-radius: 0.2rem;
-        padding: 0.3rem;
-        margin-left: 0.5rem;
-
-        @media (max-width: 481px) {
-            visibility: hidden;
-            display: none;
+        visibility: hidden;
+        display: none;
+        @media (min-width: 481px) {
+            visibility: visible;
+            display: block;
+            font-size: 1.4rem;
+            color: $babypow;
+            border: 2px solid $ivory;
+            border-radius: 0.2rem;
+            padding: 0.3rem;
+            margin-left: 0.5rem;
         }
     }
 }

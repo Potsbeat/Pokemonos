@@ -38,6 +38,7 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
     }
 
     border-radius: 1rem;
@@ -75,6 +76,25 @@ body{
         }
         
     }
+
+    button{
+        display: none;
+        @media (max-width: 400px) {
+            display: block;
+
+            width: 100%;
+            padding: 0.3rem 0.5rem;
+
+            border-radius: 0.3rem;
+            border: 2px solid $davsgrey;
+
+            background-color: $davsgrey;
+            color: $ivory;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        
+    }
 }
 
 p{
@@ -85,6 +105,18 @@ p{
 .vertical-flex{
     display: flex;
     flex-direction: column;
+}
+
+.center-items{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.space-evenly{
+    justify-content: space-evenly;
 }
 
 .horizontal-flex{
@@ -101,5 +133,24 @@ ul{
 
 .description-block{
     margin: 0.5rem;
-    
+}
+
+.hidden-large{
+    @media (min-width: 401px) {
+        display: none;
+    }
+    @media (max-width: 400px) {
+        
+        display: block;
+    }
+}
+
+.hidden-small{
+    @media (max-width: 401px) {
+        display: none;
+    }
+    @media (min-width: 400px) {
+        
+        display: block;
+    }
 }
