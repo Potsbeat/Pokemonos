@@ -14,6 +14,10 @@ function showTypes(types){
     return `<li>${types.type.name}</li>`
 }
 
+function showStats(stats){
+    return `<div class="horizontal-flex space-between"><p>${stats.stat.name}:</p><p>${stats.base_stat}</p></div>`
+}
+
 function showPokemon(nombre: string){
     getPokemon(nombre.toLowerCase()).then(response=>{
         return `
@@ -25,20 +29,23 @@ function showPokemon(nombre: string){
                 </section>
                 <div class="vertical-flex space-evenly">
                     <section class="description-block">
-                        Abilities:
+                        <span class="color-grey">Abilities:</span>
                         <ul>${response.abilities.map(showAbilities).join('')}</ul>
                     </section>
                     <section class="description-block">
-                        Types:
+                        <span class="color-grey">Types:</span>
                         <ul>${response.types.map(showTypes).join('')}</ul>
                     </section>
                     <section class="description-block hidden-large">
-                        <button>stats</button>
+                        <button id="stats_button">stats</button>
                     </section>
                 </div>
 
-                <div class="vertical-flex hidden-small">
-                    Stats:
+                <div class="vertical-flex hidden-small justify-center" id="stats_div">
+                    <section class="description-block">
+                        <span class="color-grey">Base Stats:</span>
+                        ${response.stats.map(showStats).join('')}
+                    </section>
                 </div>
             </div>`
     }).then(elemento=>{
@@ -58,7 +65,10 @@ function searchPokemon(){
     }
 }
 
-document.getElementById("search_button").onclick = searchPokemon;
+function toggleShowStats(){
+    document.getElementById("stats_div").classList.toggle("hidden-small");
+}
+
 
 const input_text = document.getElementById("search_bar");
 input_text.addEventListener("keyup", function(event) {
@@ -69,3 +79,8 @@ input_text.addEventListener("keyup", function(event) {
 });
 
 showPokemon("squirtle");
+
+setTimeout(function(){
+    document.getElementById("search_button").onclick = searchPokemon;
+    document.getElementById("stats_button").onclick = toggleShowStats;
+}, 500);

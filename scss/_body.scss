@@ -99,12 +99,13 @@ body{
 
 p{
     margin: 0.2rem;
-    background-color: aqua;
+    padding: 0.1rem;
 }
 
 .vertical-flex{
     display: flex;
     flex-direction: column;
+    
 }
 
 .center-items{
@@ -119,11 +120,22 @@ p{
     justify-content: space-evenly;
 }
 
+.space-between{
+    justify-content: space-between;
+}
+
 .horizontal-flex{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    
+}
+
+.color-grey{
+    color: $davsgrey;
+}
+
+.content-center{
+    align-content: center;
 }
 
 ul{
@@ -133,6 +145,7 @@ ul{
 
 .description-block{
     margin: 0.5rem;
+    
 }
 
 .hidden-large{
@@ -141,16 +154,17 @@ ul{
     }
     @media (max-width: 400px) {
         
-        display: block;
+        visibility: visible;
     }
 }
 
 .hidden-small{
     @media (max-width: 401px) {
+        visibility: hidden;
         display: none;
     }
     @media (min-width: 400px) {
         
-        display: block;
+        visibility: visible;
     }
 }
