@@ -20,10 +20,14 @@ function showStats(stats){
 
 function showPokemon(nombre: string){
     getPokemon(nombre.toLowerCase()).then(response=>{
+        let calmarno = "";
+        if(response.name=="squirtle"){
+            calmarno = "<span class='color-grey'>(vamoa calmarno)</span><br>"
+        }
         return `
             <div class="card">
                 <section class="vertical-flex center-items">
-                    <h3>${response.name.toUpperCase()}</h3>
+                    <h3>${response.name.toUpperCase()}</h3>${calmarno}
                     <img src="${response.sprites.other["official-artwork"].front_default}">
                     <hr>
                 </section>
@@ -61,6 +65,9 @@ function showPokemon(nombre: string){
 
 function searchPokemon(){
     let name =  (<HTMLInputElement>document.getElementById("search_bar")).value.toLowerCase();
+    if(name=="vamoa calmarno"){
+        name = "squirtle";
+    }
     if(name != ''){
         showPokemon(name)
     }
