@@ -91,6 +91,7 @@ header i {
   backdrop-filter: blur(10px);
   background-color: rgba(238, 240, 235, 0.5);
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 body {
   background-image: url("bodybg.5e681ba4.jpg");
@@ -109,6 +110,7 @@ body {
   border-radius: 1rem;
   box-shadow: 0px 1px 15px rgba(77, 80, 87, 0.5);
   background-color: white;
+  transition: height 2s;
 }
 @media (max-width: 400px) {
   .card {

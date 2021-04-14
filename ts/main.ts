@@ -43,7 +43,7 @@ function showPokemon(nombre: string){
 
                 <div class="vertical-flex hidden-small justify-center" id="stats_div">
                     <section class="description-block">
-                        <span class="color-grey">Base Stats:</span>
+                        <span class="color-grey" id="stats_span">Base Stats:</span>
                         ${response.stats.map(showStats).join('')}
                     </section>
                 </div>
@@ -67,7 +67,15 @@ function searchPokemon(){
 }
 
 function toggleShowStats(){
-    document.getElementById("stats_div").classList.toggle("hidden-small");
+    const stats_div = document.getElementById("stats_div");
+    
+    stats_div.classList.toggle("hidden-small");
+    if(!stats_div.classList.contains("hidden-small")){
+        
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }else{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 }
 
 

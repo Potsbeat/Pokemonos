@@ -13,6 +13,7 @@
     background-color: rgba($babypow, 0.5);
     
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -25,6 +26,7 @@ body{
 }
 
 .card{
+
     display: flex;
     flex-direction: row;
     
@@ -95,6 +97,7 @@ body{
         }
         
     }
+    transition: height 2s;
 }
 
 p{
