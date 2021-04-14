@@ -489,6 +489,7 @@ function showPokemon(nombre) {
             </div>`;
   }).then(elemento => {
     document.getElementById("main_container").innerHTML = elemento;
+    document.getElementById("stats_button").onclick = toggleShowStats;
   }).catch(err => {
     document.getElementById("main_container").innerHTML = `<div class="card">
                 <h3>The requested pokémon was not found</h3>
@@ -514,8 +515,7 @@ input_text.addEventListener("keyup", function (event) {
 showPokemon("squirtle");
 setTimeout(function () {
   document.getElementById("search_button").onclick = searchPokemon;
-  document.getElementById("stats_button").onclick = toggleShowStats;
-}, 500);
+}, 300);
 
 },{}]},["2rK99","5jkUb"], "5jkUb", "parcelRequireaa42")
 

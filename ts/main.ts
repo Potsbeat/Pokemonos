@@ -50,6 +50,7 @@ function showPokemon(nombre: string){
             </div>`
     }).then(elemento=>{
         document.getElementById("main_container").innerHTML = elemento;
+        document.getElementById("stats_button").onclick = toggleShowStats;
     }).catch(err=>{
         document.getElementById("main_container").innerHTML = 
             `<div class="card">
@@ -82,5 +83,5 @@ showPokemon("squirtle");
 
 setTimeout(function(){
     document.getElementById("search_button").onclick = searchPokemon;
-    document.getElementById("stats_button").onclick = toggleShowStats;
-}, 500);
+    
+}, 300);
