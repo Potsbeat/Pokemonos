@@ -1,4 +1,6 @@
 # Pokemonos
-En este proyeto se utiliza una API de Pokémon para obtener los datos y crear una pokédex.
+En este proyeto creado con React se utiliza una API RESTful de Pokémon (llamada PokéAPI) que proporciona una base de datos de todos los pokémon que existen.
 
 [Enlace a la pokédex](https://pokedecs.netlify.app/)
+
+[PokéAPI](https://pokeapi.co/)
